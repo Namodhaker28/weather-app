@@ -1,12 +1,12 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [lat, setLat] = useState();
   const [long, setLong] = useState();
-  const [mausamDetails, setMausamDetails] = useState([]);
+  // const [mausamDetails, setMausamDetails] = useState([]);
   const [city, setCity] = useState("kota");
   const [temperature, setTemperature] = useState("");
   const [desc, setDesc] = useState("");
@@ -28,7 +28,7 @@ function App() {
       )
         .then((res) => res.json())
         .then((result) => {
-          setMausamDetails(result);
+          // setMausamDetails(result);
           setTemperature(Math.round(result.main.temp));
           setDesc(result.weather[0].description);
           setName(result.name);
@@ -48,7 +48,7 @@ function App() {
     )
       .then((res) => res.json())
       .then((result) => {
-        setMausamDetails(result);
+        // setMausamDetails(result);
         setTemperature(Math.round(result.main.temp));
         setDesc(result.weather[0].description);
         setName(result.name);
